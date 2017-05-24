@@ -1,0 +1,70 @@
+<?php 
+ defined('BASEPATH') OR exit('No direct script access allowed');
+ 
+ class Login extends CI_Controller {
+ 
+ 	public function __construct()
+ 	{
+ 		parent::__construct();
+ 		$this->load->helper('url','form');	
+ 		$this->load->library('form_validation', 'session');
+ 	}
+ 	public function index()
+ 	{
+ 		
+ 		$this->load->view('v_login');	
+ 	}
+
+ 	public function cekLogin()
+ 	{
+		//$this->form_validation->set_rules('NAMA_ADMIN', 'NAMA_ADMIN', 'trim|required');
+		//$this->form_validation->set_rules('PASSWORD', 'PASSWORD', 'trim|required|callback_cekDB');
+		if(empty($_POST['NAMA_ADMIN']) and empty($_POST['PASSWORD'])){
+		//if ($this->form_validation->run()==FALSE) {
+			$this->load->view('v_login');
+		} else {
+			/*redirect('pegawai/datatable','refresh');*/
+			redirect ('home_admin');
+		}
+		
+ 	}
+	
+	public function cekDB($Password)
+ 	{
+ 		$this->load->model('m_login');
+		$Username = $this->input->post('NAMA_ADMIN');
+		$result = $this->m_login->login($Username, $Password);
+		if($result)
+		{
+			$sess_array = array();
+			foreach ($result as $row) 
+			{
+				$sess_array = array
+				(
+					'ID_ADMIN'=>$row->ID_ADMIN,
+					'NAMA_ADMIN'=> $row->NAMA_ADMIN
+				);
+				$this->session->set_userdata('logged_in', $sess_array);	
+				
+			}
+			return true;
+		}
+		else
+		{
+			$this->form_validation->set_message('cekDB',"Login Gagal Username dan Password tidak valid");
+			return false;
+		}
+ 		
+ 	} 
+
+ 	public function logout()
+ 	{
+ 		$this->session->unset_userdata('logged_in');
+ 		$this->session->sess_destroy();
+ 		redirect('login','refresh');
+ 	}
+ }
+
+ 
+ /* End of file Login.php */
+ /* Location: ./application/controllers/Login.php */ ?>
