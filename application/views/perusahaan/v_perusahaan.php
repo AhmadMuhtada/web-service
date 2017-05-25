@@ -84,7 +84,7 @@
 								<thead>
 									<tr>
 									<th>No</th>
-									<th>Id Perusahaan</th>
+									<th>Id Perusahaan</th> 
 									<th>Nama Perusahaan</th>
 									<th>Alamat Perusahaan</th>
 									<th>Info Perusahaan</th>
@@ -105,11 +105,11 @@
 										<td><?php echo $no ?></td>
 										<td><?php echo $p->ID_PERUSAHAAN ?></td>
 										<td><?php echo $p->NAMA_PERUSAHAAN ?></td>
-										<td><?php echo $p->ALAMAT_PERUSAHAAN ?></td>
-										<td><?php echo $p->INFO_PERUSAHAAN ?></td>
-										<td><?php echo $p->EMAIL_PERUSAHAAN ?></td>
-										<!--<td><?php echo $p->PASSWORD_PERUSAHAAN ?></td>-->
-										<td><?php echo $p->NO_TELP_PERUSAHAAN ?></td>
+										<td><?php echo $p->ALAMAT_PERUSAHAAN ?></td> 
+										<td><?php echo $p->INFO_PERUSAHAAN ?></td> 
+										<td><?php echo $p->EMAIL_PERUSAHAAN ?></td> 
+										<!--<td><?php echo $p->PASSWORD_PERUSAHAAN ?> </td>-->
+										<td><?php echo $p->NO_TELP_PERUSAHAAN ?></td> 
 										<!--<td><?php echo $p->FOTO_PERUSAHAAN ?></td>-->
 
 										<td><img width="100" height="100" src="<?=base_url()?>assets/foto/perusahaan/<?=$p->FOTO_PERUSAHAAN?>"></td>
