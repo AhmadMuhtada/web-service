@@ -68,8 +68,8 @@ class lowongan extends CI_Controller{
 				
 				}
 				else{
-					$this->mlowongan->updatelowongan($ID_PERUSAHAAN);
-					$data["lowongan"] = $this->mlowongan->getDatalowongan();	
+					$this->mlowongan->updatelowongan($ID_PERUSAHAAN) ;
+					$data["lowongan"] = $this->mlowongan->getDatalowongan() ;	
 					$this->load->view('lowongan/vlowongan', $data);
 				}
 
