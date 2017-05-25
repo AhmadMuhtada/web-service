@@ -113,5 +113,6 @@ class lowongan extends CI_Controller{
 		$this->mlowongan->m_delete($where,'post_lowongan');
 		redirect('lowongan');
 	}
+
 }
 ?>
