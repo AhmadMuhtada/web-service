@@ -66,12 +66,12 @@
 								<?php echo validation_errors(); ?>
 								<div class="form-group">
 									<label for="">Id Perusahaan</label>
-									<input type="text" class="form-control" id="ID_PERUSAHAAN" name="ID_PERUSAHAAN" placeholder="Id Perusahaan" >
+									<input type="text" class="form-control" id="ID_PERUSAHAAN" name="ID_PERUSAHAAN" placeholder="Id Perusahaan" > 
 									<br>
 									<label for="">Bidang Pekerjaan</label>
-									<input type="text" class="form-control" id="BIDANG_PEKERJAAN" name="BIDANG_PEKERJAAN" placeholder="Nama Bidang Pekerjaan" >
-									<br>
-									<label for="">Fasilitas</label>
+									<input type="text" class="form-control" id="BIDANG_PEKERJAAN" name="BIDANG_PEKERJAAN" placeholder="Nama Bidang Pekerjaan" > 
+									<br> 
+									<label for="">Fasilitas</label> 
 									<input type="text" class="form-control" id="FASILITAS" name="FASILITAS" placeholder="Fasilitas " >
 									<br>
 									<label for="">Gaji</label>
