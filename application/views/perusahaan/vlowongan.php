@@ -101,15 +101,15 @@
 									<tr>
 										<td><?php echo $no ?></td>
 										<td><?php echo $p->ID_PERUSAHAAN ?></td>
-										<td><?php echo $p->BIDANG_PEKERJAAN ?></td>
-										<td><?php echo $p->FASILITAS ?></td>
+ 										<td><?php echo $p->BIDANG_PEKERJAAN ?></td>
+ 										<td><?php echo $p->FASILITAS ?></td>
 										<td><?php echo $p->GAJI ?></td>
 										<td><?php echo $p->JUMLAH_LOWONGAN ?></td>
 										<td><?php echo $p->DEADLINE ?></td>
 										<td>
 											
 											<a href="<?php echo site_url('lowongan/update/').$p->ID_PERUSAHAAN ?>" type="button" class="btn btn-success"> <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit</a>
-											<a href="<?php echo site_url('lowongan/delete/').$p->ID_PERUSAHAAN ?>" type="button" class="btn btn-danger" onClick="JavaScript: return confirm('Anda yakin Hapus data ini ?')"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete</a>
+											<a href="<?php echo site_url('lowongan/delete/').$p->ID_PERUSAHAAN ?>" type="button" class="btn btn-danger" onClick="JavaScript: return confirm('Anda yakin Hapus data ini ?')"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete</a> 
 										</td>
 									</tr>
 								<?php 
