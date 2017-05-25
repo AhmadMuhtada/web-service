@@ -70,9 +70,18 @@
 									
 								</div>
 								<button type="submit" class="btn btn-primary">Submit</button>
-								</form>
-						<?php //echo form_close(); ?>
+						</form>
 					</div>
+
+					<?php
+					if($this->session->flashdata('pesan') <> ''){
+						?>
+						<div class="alert alert-dismissible alert-danger">
+						<?php echo $this->session->flashdata('pesan');?>
+						</div>
+						<?php
+					}
+					?>
 
 					</div>
 
