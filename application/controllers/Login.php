@@ -19,47 +19,66 @@
  	{
 		//$this->form_validation->set_rules('NAMA_ADMIN', 'NAMA_ADMIN', 'trim|required');
 		//$this->form_validation->set_rules('PASSWORD', 'PASSWORD', 'trim|required|callback_cekDB');
-		if(empty($_POST['NAMA_ADMIN']) and empty($_POST['PASSWORD'])){
+		//if(empty($_POST['NAMA_ADMIN']) and empty($_POST['PASSWORD'])){
 		//if ($this->form_validation->run()==FALSE) {
-			$this->load->view('v_login');
-		} else {
+		//	$this->load->view('v_login');
+		//} else {
 			/*redirect('pegawai/datatable','refresh');*/
-			redirect ('home_admin');
-		}
+		//	redirect ('home_admin');
+		//}
 		
- 	}
-	
-	public function cekDB($Password)
- 	{
- 		$this->load->model('m_login');
 		$Username = $this->input->post('NAMA_ADMIN');
-		$result = $this->m_login->login($Username, $Password);
-		if($result)
+		$Password = $this->input->post('PASSWORD');
+
+		$login = $this->m_login->login($Username, $Password);
+		if($login->num_rows() == 1)
 		{
-			$sess_array = array();
-			foreach ($result as $row) 
-			{
-				$sess_array = array
-				(
-					'ID_ADMIN'=>$row->ID_ADMIN,
-					'NAMA_ADMIN'=> $row->NAMA_ADMIN
-				);
-				$this->session->set_userdata('logged_in', $sess_array);	
-				
-			}
-			return true;
+			foreach($login->result() as $d){
+				$sess_data['ID_ADMIN'] = $d->ID_ADMIN;
+				$sess_data['NAMA_ADMIN'] = $d->NAMA_ADMIN;
+				$this->session->set_userdata($sess_data);
+			} 
+			redirect('home_admin');
+			
 		}
 		else
 		{
-			$this->form_validation->set_message('cekDB',"Login Gagal Username dan Password tidak valid");
-			return false;
+		$this->session->set_flashdata('pesan', 'Maaf, Kombinasi Username dengan Password salah.');
+			redirect('Login');
 		}
+ 	}
+	
+	//public function cekDB($Password)
+ 	//{
+ 	//	$this->load->model('m_login');
+	//	$Username = $this->input->post('NAMA_ADMIN');
+	//	$result = $this->m_login->login($Username, $Password);
+	//	if($result)
+	//	{
+	//		$sess_array = array();
+	//		foreach ($result as $row) 
+	//		{
+	//			$sess_array = array
+	//			(
+	//				'ID_ADMIN'=>$row->ID_ADMIN,
+	//				'NAMA_ADMIN'=> $row->NAMA_ADMIN
+	//			);
+	//			$this->session->set_userdata('logged_in', $sess_array);	
+				
+	//		}
+	//		return true;
+	//	}
+	//	else
+	//	{
+	//		$this->form_validation->set_message('cekDB',"Login Gagal Username dan Password tidak valid");
+	//		return false;
+	//	}
  		
- 	} 
+ 	//} 
 
  	public function logout()
  	{
- 		$this->session->unset_userdata('logged_in');
+ 		//$this->session->unset_userdata('logged_in');
  		$this->session->sess_destroy();
  		redirect('login','refresh');
  	}
