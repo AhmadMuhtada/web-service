@@ -10,7 +10,7 @@ body {
 
 body, html {
   height: 100%;
-  background-color: #583e7e;
+  background-color: #ffffff;
 }
 
 .nav .open > a { background-color: transparent; }
@@ -301,7 +301,7 @@ body, html {
 
 /* SOME DEMO STYLES - NOT REQUIRED */
 
-body, html { background-color: #583e7e; }
+body, html { background-color: #ffffff; }
 
 body h1, body h2, body h3, body h4 { color: rgba(255, 255, 255, 0.9); }
 

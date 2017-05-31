@@ -8,8 +8,6 @@
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="<?php echo base_url('') ?>assets/css/bootstrap.min.css">
 		<link rel="stylesheet" href="<?php echo base_url('') ?>assets/css/logged.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-		
 		
 		</head>
 		<body>
@@ -31,19 +29,19 @@
 								<form id="login-form" action="<?php echo site_url('Login/cekLogin');?>" method="post" role="form" style="display: block;">
 								<?php echo validation_errors(); ?>
 									<div class="form-group">
-								<input type="text" name="NAMA_ADMIN" required id="NAMA_ADMIN" tabindex="1" class="form-control" placeholder="Username"></i>
+								<input type="text" name="NAMA_ADMIN" required id="NAMA_ADMIN" class="form-control" placeholder="Username"></i>
 									</div>
 									<div class="form-group">
-										<input type="password" name="PASSWORD" required id="PASSWORD" tabindex="2" class="form-control" placeholder="Password">
+										<input type="password" name="PASSWORD" required id="PASSWORD" class="form-control" placeholder="Password">
 									</div>
 									<div class="form-group text-center">
-										<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+										<input type="checkbox" class="" name="remember" id="remember">
 										<label for="remember"> Remember Me</label>
 									</div>
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
-												<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="LOGIN">
+												<input type="submit" name="login-submit" id="login-submit" class="form-control btn btn-login" value="LOGIN">
 											</div>
 										</div>
 									</div>
@@ -54,21 +52,23 @@
 										</div>
 									</div>
 								</form>
-								<form id="register-form" action="<?php echo site_url('registrasi/create');?>" method="post" role="form" style="display: none;">
+								
+								<form id="register-form" action="" method="post" role="form" style="display: none;">
+								<?php echo form_open_multipart('Registrasi/create'); ?>
 								<?php echo validation_errors(); ?>
 									<div class="form-group">
-										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" required="required">
+										<input type="text" name="username" id="username" class="form-control" placeholder="Username" required="required">
 									</div>
 									<div class="form-group">
-										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required="required" value="<?php echo set_value('password'); ?>">
+										<input type="password" name="password" id="password" class="form-control" placeholder="Password" required="required" value="<?php echo set_value('password'); ?>">
 									</div>
 									<div class="form-group">
-										<input type="password" name="confirm_password" id="confirm_password" tabindex="2" class="form-control" placeholder="Konfirmasi Password" value="<?php echo set_value('confirm_password'); ?>">
+										<input type="password" name="confirm_password" id="confirm_password" class="form-control" placeholder="Konfirmasi Password" value="<?php echo set_value('confirm_password'); ?>">
 									</div>
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
-												<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="DAFTAR">
+												<input type="submit" name="register-submit" id="register-submit" class="form-control btn btn-register" value="DAFTAR">
 											</div>
 										</div>
 									</div>

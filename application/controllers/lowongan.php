@@ -10,7 +10,7 @@ class lowongan extends CI_Controller{
 	{
 		
 		$data["lowongan"]=$this->mlowongan->getDatalowongan();
-		$this->load->view('perusahaan/vlowongan',$data);
+		$this->load->view('lowongan/vlowongan',$data);
 	}
 
 	public function create()
@@ -68,8 +68,8 @@ class lowongan extends CI_Controller{
 				
 				}
 				else{
-					$this->mlowongan->updatelowongan($ID_PERUSAHAAN) ;
-					$data["lowongan"] = $this->mlowongan->getDatalowongan() ;	
+					$this->mlowongan->updatelowongan($ID_PERUSAHAAN);
+					$data["lowongan"] = $this->mlowongan->getDatalowongan();	
 					$this->load->view('lowongan/vlowongan', $data);
 				}
 
@@ -113,6 +113,5 @@ class lowongan extends CI_Controller{
 		$this->mlowongan->m_delete($where,'post_lowongan');
 		redirect('lowongan');
 	}
-
 }
 ?>

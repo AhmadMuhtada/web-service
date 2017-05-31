@@ -7,6 +7,8 @@ class mform extends CI_Model{
 	}
 
 
+
+
 	public function insertForm()
 		{
 			//$ID_ADMIN = $this->input->post('ID_ADMIN');

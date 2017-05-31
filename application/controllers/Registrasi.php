@@ -20,7 +20,7 @@
 		$this->form_validation->set_rules('password', 'Password', 'required|min_length[6]');
 		$this->form_validation->set_rules('confirm_password', 'Konfirmasi Password', 'required|min_length[6]|matches[password]');
 
-		$this->load->model('User_Model');
+		$this->load->model('m_login');
 		if ($this->form_validation->run()==FALSE) {
 			$this->load->view('v_login');
 		} else {
@@ -31,14 +31,14 @@
 
 	public function isUsernameExist($username) {
 	    $this->load->library('form_validation');
-	    $this->load->model('User_Model');
-	    $is_exist = $this->User_Model->isUsernameExist($username);
+	    $this->load->model('m_login');
+	    $is_exist = $this->m_login->isUsernameExist($username);
 
 	    if ($is_exist) {
 	        $this->form_validation->set_message('isUsernameExist', 'Maaf, username sudah ada.');    
 	        return false;
 	    } else {
-	    	$this->User_Model->insertAdmin();
+	    	$this->m_login->insertAdmin();
 	    	redirect('login','refresh');
 	        return true;
 	    }

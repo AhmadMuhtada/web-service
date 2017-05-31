@@ -3,9 +3,9 @@
 class mlowongan extends CI_Model{
 	public function getDatalowongan()
 	{
-		$this->db->select("ID_PERUSAHAAN,BIDANG_PEKERJAAN,FASILITAS,GAJI,JUMLAH_LOWONGAN,DEADLINE") ;
-			$query = $this->db->get('post_lowongan') ;
-			return $query->result() ;
+		$this->db->select("ID_PERUSAHAAN,BIDANG_PEKERJAAN,FASILITAS,GAJI,JUMLAH_LOWONGAN,DEADLINE");
+			$query = $this->db->get('post_lowongan');
+			return $query->result();
 	}
 
 
