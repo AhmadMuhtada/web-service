@@ -56,9 +56,9 @@
 			<?php echo validation_errors(); ?>
 						<div class="form-group">
 						
-									<label for="">ID Admin</label>
+									<!--<label for="">ID Admin</label>
 									<input type="text" class="form-control" id="ID_ADMIN" name="ID_ADMIN" placeholder="Id Anda" >
-									<br>
+									<br>-->
 									<label for="">Nama Admin</label>
 									<input type="text" class="form-control" id="NAMA_ADMIN" name="NAMA_ADMIN" placeholder="Nama Anda" >
 									<br>

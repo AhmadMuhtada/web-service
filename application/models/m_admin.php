@@ -21,7 +21,7 @@ class m_admin extends CI_Model{
 
 			//$query = $this->db->query("INSERT INTO admin VALUES ('$ID_ADMIN', '$NAMA_ADMIN', '$password_encrypt', '$FOTO_ADMIN')");
 			$insert_admin = array(
-				'ID_ADMIN' => $this->input->post('ID_ADMIN'),
+				//'ID_ADMIN' => $this->input->post('ID_ADMIN'),
 				'NAMA_ADMIN' => $this->input->post('NAMA_ADMIN'),
 				'PASSWORD' => $this->input->post('PASSWORD'),
 				'FOTO_ADMIN' => $this->upload->data('file_name'),

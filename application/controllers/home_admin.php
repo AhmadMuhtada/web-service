@@ -25,7 +25,7 @@ class home_admin extends CI_Controller{
 	{
 		$this->load->helper('url','form');	
 		$this->load->library('form_validation');
-		$this->form_validation->set_rules('ID_ADMIN', 'ID_ADMIN', 'trim|required|min_length[2]|max_length[5]');
+		//$this->form_validation->set_rules('ID_ADMIN', 'ID_ADMIN', 'trim|required|min_length[2]|max_length[5]');
 		$this->form_validation->set_rules('NAMA_ADMIN', 'NAMA_ADMIN', 'trim|required|min_length[2]|max_length[25]');
 		$this->form_validation->set_rules('PASSWORD', 'PASSWORD', 'trim|required|min_length[2]|max_length[50]');
 		$this->load->model('m_admin');	

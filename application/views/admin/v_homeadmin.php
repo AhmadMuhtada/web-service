@@ -68,6 +68,7 @@
 								<?php 
 								$no=1;
 								
+
 								foreach ($admin as $b) { ?>
 									<tr>
 										<td><?php echo $no ?></td>
@@ -84,7 +85,8 @@
 										</td>
 									</tr>
 								<?php 
-								$no++;} ?>
+								$no++;
+								} ?>
 								</tbody>
 							</table>
 						</div>
