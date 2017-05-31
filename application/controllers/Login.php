@@ -17,16 +17,6 @@
 
  	public function cekLogin()
  	{
-		//$this->form_validation->set_rules('NAMA_ADMIN', 'NAMA_ADMIN', 'trim|required');
-		//$this->form_validation->set_rules('PASSWORD', 'PASSWORD', 'trim|required|callback_cekDB');
-		//if(empty($_POST['NAMA_ADMIN']) and empty($_POST['PASSWORD'])){
-		//if ($this->form_validation->run()==FALSE) {
-		//	$this->load->view('v_login');
-		//} else {
-			/*redirect('pegawai/datatable','refresh');*/
-		//	redirect ('home_admin');
-		//}
-		
 		$Username = $this->input->post('NAMA_ADMIN');
 		$Password = $this->input->post('PASSWORD');
 
@@ -83,7 +73,5 @@
  		redirect('login','refresh');
  	}
  }
-
  
- /* End of file Login.php */
- /* Location: ./application/controllers/Login.php */ ?>
+ ?>
