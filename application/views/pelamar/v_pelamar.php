@@ -19,8 +19,9 @@
   <!-- Sidebar -->
   <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
     <ul class="nav sidebar-nav">
-      <li class="sidebar-brand"> <a href="#"> OVA ! </a> </li>
-      <li> <a href="#"><i class="fa fa-fw fa-home"></i> Beranda </a> </li>
+     <img class = "img-profil" src ="<?php echo base_url('') ?>assets/foto/logo/logofix.png" />
+	  <br>
+      <li> <a href="<?php echo site_url('home_admin') ?>"><i class="fa fa-fw fa-home"></i> Beranda </a> </li>
       <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-file-o"></i> Data <span class="caret"></span></a>
         <ul class="dropdown-menu" role="menu">
           <li><a href="<?php echo site_url('home_admin') ?>">List Admin</a></li>
@@ -47,9 +48,11 @@
   <div id="page-content-wrapper">
     <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas"> <span class="hamb-top"></span> <span class="hamb-middle"></span> <span class="hamb-bottom"></span> </button>
     <div class="container">
+	<div class="card card-container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-          <h1 class="page-header">List Pelamar</h1>
+          <h2 class="page-header"><font color ="black">List Pelamar</font></h2>
+		  <br>
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
 						<div class="table-responsive">

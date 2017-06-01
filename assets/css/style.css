@@ -10,7 +10,39 @@ body {
 
 body, html {
   height: 100%;
-  background-color: #ffffff;
+  background-color: #1E90FF;
+}
+
+.card-container.card {
+    max-width: 800px;
+    padding: 20px 20px;
+}
+
+/*.btn {
+    font-weight: 700;
+    height: 36px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+/*
+ * Card component
+ */
+.card {
+    background-color: #F7F7F7;
+    /* just in case there no content*/
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 .nav .open > a { background-color: transparent; }
@@ -158,10 +190,15 @@ body, html {
   text-decoration: none;
 }
 
-.sidebar-nav > .sidebar-brand {
-  font-size: 20px;
-  height: 65px;
-  line-height: 44px;
+.sidebar-nav > .img-profil {
+  width: 110px;
+    height: 110px;
+	padding : 10;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
 }
 
 /*-------------------------------*/
@@ -301,7 +338,7 @@ body, html {
 
 /* SOME DEMO STYLES - NOT REQUIRED */
 
-body, html { background-color: #ffffff; }
+body, html { background-color: #6495ED; }
 
 body h1, body h2, body h3, body h4 { color: rgba(255, 255, 255, 0.9); }
 

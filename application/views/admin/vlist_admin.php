@@ -46,7 +46,7 @@
 	th
 	{
 	background-color:green;
-	font-color:white;
+	font-color:black;
 	}
 	tr,td,th{
 	padding-left:40px;
